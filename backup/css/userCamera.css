@@ -1,0 +1,12 @@
+.THESEED_uc_box {
+    -webkit-transition: width .15s ease, height .15s ease;
+    min-width: 400px;
+    min-height: 240px;
+    width: 400px;
+    margin: 3px;
+}
+.THESEED_uc_box video {
+    width: 100%;
+    opacity: 0.95;
+    overflow: hidden;
+}

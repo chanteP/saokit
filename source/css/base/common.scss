@@ -1,0 +1,204 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "../variable.scss";
+html{
+    font-size: 100%; 
+    font-size: 50px; 
+    height:100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    background: #fff;
+}
+@media screen and (max-width : 750px){
+    html{
+        -webkit-font-smoothing: antialiased;
+    }
+}
+/* body loading状态
+----------------------------------------------------------------------------------------*/
+body{
+    height:100%;
+    color:#333;
+    font-size: .26rem;
+    font-size: 16px;
+    font-family: $font-family;
+    background: none $color-background center center no-repeat;
+    overflow: hidden;
+}
+/* 通用预设
+----------------------------------------------------------------------------------------*/
+h1, 
+h2,
+h3,
+h4{
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    font-size: .44rem;
+}
+h2 {
+    font-size: .36rem;
+}
+h3 {
+    font-size: .32rem;
+    font-weight: 700;
+}
+h4 {
+    font-size: .30rem;
+    font-weight: 400;
+}
+a{
+    color: $color-main;
+}
+a:visited{
+    color: $color-main-dark;
+}
+a:hover,
+a:active{
+    color: $color-strong;
+}
+em{
+    color: $color-strong;
+}
+strong{
+    font-weight: 700;
+}
+p{
+    line-height: 1.8;
+}
+b,i,em{
+    font-style: normal;
+}
+code{
+    display: block;
+    font-size: .26rem;
+    background: #f0f0f0;
+    padding: .2rem .2rem;
+    margin: .2rem auto;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    line-height: 1.4;
+}
+label{
+    cursor: pointer;
+}
+input,
+textarea{
+    font-size: .3rem;
+    line-height: 1;
+    color: #333;
+}
+input[type="number"]{
+    &::-webkit-inner-spin-button{
+        display: none;
+    }
+}
+hr {
+    display:block;
+    height:0;
+    border:0;
+    margin: .14rem 0;
+    padding:0;
+    clear:both;
+}
+::selection{
+    background: $color-strong;
+    color: #fff;
+    text-shadow: none;
+}
+/*common
+----------------------------------------------------------------------------------------*/
+.hide{display: none!important;}
+.hidden{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.fullscreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.noborder{
+    border:none;
+}
+.text-ellipsis{
+    @include text-ellipsis;
+}
+input::input-placeholder{
+    // line-height: $form-lineheight;
+    color:$color-font-disabled;
+}
+input::-webkit-input-placeholder{
+    // line-height: $form-lineheight;
+    color:$color-font-disabled;
+}
+.clearfix:after{
+    content: '';
+    display:block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.scroll{
+    @include scroll;
+}
+.scroll-view{
+    height: 100%;
+    @include scroll(scroll);
+}
+.scroll-view-x{
+    @include scrollX(scroll);
+}
+.flexbox{
+    @include flexbox;
+}
+.flex{
+    @include flex(1);
+}
+
+.mid{
+    text-align:center;
+}
+.mid:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.mid > .midcont{
+    display:inline-block;
+    width:100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loading{
+    @include loadingIcon;
+    position: relative;
+    &:before{
+        @include animation(maware 1s infinite 0s);
+    }
+}
+body.locate{
+    @include transition(.4s);
+    @include transform(translateX(-100%));
+    outline: $color-border 1px solid;
+}
+@-webkit-keyframes maware {
+    0% {
+        @include transform(rotate(360deg));
+    }
+
+    100% {
+        @include transform(rotate(0deg));
+    }
+}

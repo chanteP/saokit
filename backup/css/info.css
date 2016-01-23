@@ -1,0 +1,9 @@
+.THESEED_info_box {
+/*    min-width: 400px;*/
+}
+.THESEED_info_box time {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(0,0,0,.7);
+}

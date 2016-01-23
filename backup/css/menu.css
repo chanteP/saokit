@@ -1,0 +1,197 @@
+.THESEED_menu {
+    -webkit-transition: opacity 1.4s ease;
+    position: fixed;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    font-size: 12px;
+    font-family: 'consolar', 'Microsoft YaHei';
+    color: #666;
+    z-index: 10001;
+}
+.THESEED_menu .THESEED_func {
+
+}
+.THESEED_menu .THESEED_panel {
+
+}
+.THESEED_menu .THESEED_col {
+
+}
+
+.THESEED_menu .THESEED_col {
+
+}
+
+/*滚动条*/
+.THESEED_menu ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+}
+.THESEED_menu ::-webkit-scrollbar {
+    -webkit-transition: all .1s ease;
+    width: 10px;
+    height: 13px;
+}
+.THESEED_menu ::-webkit-scrollbar-thumb {
+    -webkit-transition: all .1s ease;
+    margin: 2px 0;
+/*    background-color: rgba(255,255,255,.6);*/
+    background-color: rgba(255,190,0,.6);
+    background-clip: padding-box;
+    border: 1px solid #fd6;
+    min-height: 28px;
+    box-shadow: rgba(0,0,0,.1) 0 0 10px;
+}
+.THESEED_menu ::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #e90;
+    background-color: rgba(255,190,0,.8);
+    box-shadow: rgba(255,200,0,.3) 0 0 10px;
+}
+/*根目录*/
+.THESEED_menu .THESEED_col ul[list-for=root] {
+    -webkit-transition: opacity 0.2s ease, right 0.15s ease;
+    position: static;
+    opacity: 0;
+    width: 50px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-height: 40px;
+    max-height: 400px;
+    box-shadow: none;
+    overflow-x: visible;
+    overflow-y: visible;
+    z-index: 10002;
+}
+.THESEED_menu .THESEED_col ul[list-for=root]:before {
+    content: none;
+}
+.THESEED_menu .THESEED_col ul[list-for=root] > li {
+    -webkit-transition: all 0.2s ease, bottom 0.5s ease, background 0.1s ease;
+    position: relative;
+    bottom: 600px;
+    margin: 17px 6px 17px 6px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgba(255,255,255,.7);
+    font-weight: 700;
+    /*    overflow: hidden;*/
+    z-index: 10003;
+}
+.THESEED_menu .THESEED_col ul[list-for=root] > li:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -8px;
+    width: 67px;
+/*    height: 60px;*/
+    z-index: 10002;
+}
+.THESEED_menu .THESEED_col ul[list-for=root] > li:after {
+    -webkit-transition: all 0.2s ease;
+    content: '';
+    position: absolute;
+    margin: 0;
+    top: -4px;
+    left: -4px;
+    display: block;
+    height: 46px;
+    width: 46px;
+    border-radius: 42px;
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: rgba(0,0,0,.1) 0 0 200px;
+    background-color: transparent;
+}
+.THESEED_menu .THESEED_col ul[list-for=root] > li:hover, .THESEED_menu .THESEED_col ul[list-for=root] > li.on {
+    background-color: rgba(255,187,0,.9);
+    box-shadow: rgba(255,190,0,.1) 0 0 20px;
+    color: #fff;
+}
+.THESEED_menu .THESEED_col ul[list-for=root] > li:hover:after, .THESEED_menu .THESEED_col ul[list-for=root] > li.on:after {
+    border: 1px solid rgba(255,187,0,.9);
+    color: #fff;
+}
+/* 普通目录*/
+.THESEED_menu .THESEED_col ul {
+    -webkit-transition: opacity 0.2s ease, right 0.15s ease, left 0.15s ease;
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(.85, transparent), color-stop(1, #999));
+    position: fixed;
+    float: left;
+    margin-right: 8px;
+    border-right: 3px solid rgba(255,255,255,.6);
+    padding-left: 20px;
+    padding-right: 1px;
+    top: 0;
+    right: -70px;
+    display: none;
+    opacity: 0;
+    width: 220px;
+    min-height: 40px;
+    max-height: 300px;
+    color: #666;
+    overflow: visible;
+    overflow-y: scroll;
+    z-index: 10000;
+}
+.THESEED_menu .THESEED_col ul li {
+    -webkit-transition: background-color 0.2s ease, color 0.3s ease, background-image 0.07s ease;
+    position: relative;
+    list-style: none;
+    margin: 3px 0;
+    padding: 0 6px 0 48px;
+    line-height: 44px;
+    height: 44px;
+    text-align: left;
+    background-color: rgba(255,255,255,.84);
+    cursor: pointer;
+    overflow: visible;
+    box-shadow: rgba(0,0,0,.2) 0 0 4px;
+    /*    background-image:url('chrome-extend://@@extension_id/image/icon.png');*/
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*    overflow: hidden;*/
+}
+.THESEED_menu .THESEED_col ul li:hover, .THESEED_menu .THESEED_col ul li.on {
+    background-color: rgba(255,187,0,.84);
+    color: #fff;
+}
+.THESEED_menu .THESEED_col ul li.on:before {
+    content: ' ';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -12px;
+    height: 0;
+    width: 0;
+    border-left: 12px solid rgba(230,230,230,.7);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.THESEED_menu .THESEED_col ul li a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.THESEED_menu .THESEED_col ul li a:link, .THESEED_menu .THESEED_col ul li a:visited {
+    text-decoration: none;
+    color: #666;
+}
+.THESEED_menu .THESEED_col ul li:hover > a, .THESEED_menu .THESEED_col ul li.on > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*.THESEED_menu .THESEED_col ul li.on > ul {
+ opacity: 1;
+ top: -50%;
+ right: 220px;
+ display: block;
+ }
+ .THESEED_menu .THESEED_col ul[list-for=root] li.on > ul {
+ right: 60px;
+ }*/

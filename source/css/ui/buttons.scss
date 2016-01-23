@@ -1,0 +1,84 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+/*
+    button
+*/
+@import "../variable.scss";
+
+.btn,
+a.btn{
+    color: #fff;
+    text-decoration: none;
+}
+.btn{
+    display: block;
+    padding: .3rem .6rem;
+    margin: .12rem .07rem;
+    border-radius: .04rem;
+    text-align: center;
+    font-size: .32rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: $color-main;
+    border: 1px solid $color-main;
+
+    &:nth-of-type(1){
+        margin-left: .14rem;
+    }
+    &:nth-last-of-type(1){
+        margin-right: .14rem;
+    }
+
+    &:active{
+        background: $color-main-dark;
+    }
+
+    &.block,
+    &.block:nth-of-type(1),
+    &.block:nth-last-of-type(1){
+        margin: 0;
+        border: none;
+        border-radius: 0;
+    }
+    &.line {
+        color: $color-main-dark;
+        background: transparent;
+
+        &:active{
+            background: lighten($color-main, 40%);;
+        }
+    }
+    &.mark {
+        color: #fff;
+        background: $color-strong;
+        border-color: $color-strong;
+
+        &:active{
+            background: $color-strong-dark;
+        }
+    }
+    &.sub {
+        color: $color-font-sub;
+        background: #e5e5e5;
+        border-color: #d9d9d9;
+
+        &:active{
+            background: #d9d9d9;
+            border-color: #ccc;
+        }
+    }
+    &.dis {
+        color: #b2b2b2;
+        background: #e5e5e5;
+        border-color: #d9d9d9;
+    }
+
+    &.pure{
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+    &.mini{
+        display: inline-block;
+        padding: .14rem .30rem;
+        line-height:1;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>设置</title>
+		<link rel="stylesheet" type="text/css" href="/css/option.css" />
+	</head>
+	<body>
+		<section class="header">
+			<h1>{ 插件设置 }</h1>
+		</section>
+		<section class="main" id="main">
+			<div class="side">
+				<ul class="nav" id="nav">
+					<li class="opt_main">
+						<a action-type="nav_btn" action-data="page=home" class="cur">选项</a>
+					</li>
+					<li class="opt_sub">
+						<a action-type="nav_btn" action-data="page=account">账号设置</a>
+					</li>
+					<li class="opt_sub">
+						<a action-type="nav_btn" action-data="page=float">边缘浮窗</a>
+					</li>
+					<li class="opt_sub">
+						<a action-type="nav_btn" action-data="page=picsc">图片缩放</a>
+					</li>
+					<li class="opt_main">
+						<a action-type="nav_btn" action-data="page=about">关于</a>
+					</li>
+				</ul>
+				<div class="info"></div>
+			</div>
+			<form name="form_option" id="form">
+				<!-- home -->
+				<div class="optsBox cur" id="p_home">
+					<fieldset>
+						<legend>
+							插件功能
+						</legend>
+						<button class="funcBtn" id="" action-type="func_btn">
+							右键摘录
+						</button>
+						<button class="funcBtn" id="b_showkit" action-type="func_btn" action-data="key=showkit">
+							摘录浮窗
+						</button>
+						<button class="funcBtn" id="b_shadow" action-type="func_btn" action-data="key=shadow">
+							图片背景阴影
+						</button>
+						<button class="funcBtn" id="b_cloneimg" action-type="func_btn" action-data="key=cloneimg">
+							图片缩放
+						</button>
+					</fieldset>
+					<fieldset>
+						<legend>
+							账号设置
+						</legend>
+						<input type="radio" name="access" />
+						<label for="access">xxxx</label>
+						<hr />
+						<div class="innerbox">
+							<input type="radio" name="journal" />
+							<label for="journal">xxx</label>
+						</div>
+					</fieldset>
+				</div>
+				<!-- account -->
+				<div class="optsBox cur" id="p_account">
+					<fieldset>
+						<legend>
+							账号设置
+						</legend>
+					</fieldset>
+				</div>
+				<!-- float -->
+				<div class="optsBox" id="p_float">
+					<fieldset>
+						<legend>
+							浮窗设置
+						</legend>
+						<input type="checkbox" />
+						<label>边框厚度</label>
+						<div class="funcSlide" title="1px">
+							<div class="funcSlider"></div>
+						</div>
+					</fieldset>
+				</div>
+				<!-- picsc -->
+				<div class="optsBox" id="p_picsc">
+					<fieldset>
+						<legend>
+							图片缩放设置
+						</legend>
+						<input type="checkbox" />
+						<label>边框厚度</label>
+						<div class="funcSlide" title="1px">
+							<div class="funcSlider"></div>
+						</div>
+					</fieldset>
+				</div>
+				<!-- about -->
+				<div class="optsBox" id="p_about">
+					<fieldset>
+						<legend>
+							 关于
+						</legend>
+						<input type="checkbox" />
+						<label>边框厚度</label>
+						<div class="funcSlide" title="1px">
+							<div class="funcSlider"></div>
+						</div>
+					</fieldset>
+				</div>
+			</form>
+		</section>
+	</body>
+	<script src="/js/config.js"></script>
+	<script src="/js/option.js"></script>
+</html>

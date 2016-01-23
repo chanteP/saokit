@@ -1,0 +1,97 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "../variable.scss";
+$bar-nav-height: .9rem;
+.bar-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: $bar-nav-height;
+    line-height: $bar-nav-height;
+    overflow: hidden;
+    background: $color-main;
+    color: $color-font-main;
+    z-index: 120;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 .06rem;
+    @include transition;
+    @include transform(translate(0, -100%));
+
+    .nav-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 80%;
+        margin: auto;
+        @include text-ellipsis;
+        text-align: center;
+        height: $bar-nav-height;
+        line-height: $bar-nav-height;
+        color: $color-font-main;
+        font-size: .32rem;
+        font-weight: 700;
+    }
+    .nav-btn{
+        position: relative;
+        height: $bar-nav-height;
+        line-height: $bar-nav-height;
+        color: $color-font-main;
+        text-decoration: none;
+        font-size: .32rem;
+        font-weight: 700;
+        z-index: 1;
+        &.nav-btn-left{
+            float: left;
+        }
+        &.nav-btn-right{
+            float: right;
+        }
+    }
+    .nav-btn a{
+        display: inline-block;
+        text-decoration: inherit;
+        padding: 0 .3rem;
+        line-height: $bar-nav-height;
+        cursor: pointer;
+        color: inherit;
+    }
+    &[data-show]{
+        visibility: visible;
+        @include transform(translate(0, 0));
+    }
+}
+.bar-tab{
+
+}
+.bar-search{
+    position: relative;
+    display: block;
+    @include flexbox;
+    padding: .18rem $wrap-padding;
+    input:not([type]),
+    input[type="text"],
+    input[type="search"]{
+        display: block;
+        @include flex;
+        padding: .1rem .3rem .1rem .5rem;
+        border-radius: .08rem;
+        border:none;
+        box-shadow:none;
+    }
+    &:before{
+        content: '\e610';
+        @include themify;
+        position: absolute;
+        line-height: .3rem;
+        color: #999;
+        font-weight: 700;
+        left: .5rem;
+        @include middleY;
+    }
+}
+.bar-scope{
+
+}
+

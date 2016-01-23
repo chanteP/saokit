@@ -1,0 +1,136 @@
+.THESEED_ps_bodyCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 14511;
+}
+.THESEED_ps_bodyCanvas.THESEED_ps_bodyCanvasCover, .THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasPiece {
+    background: rgba(0,0,0,.4);
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasPiece, .THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea {
+    position: absolute;
+    z-index: 14511;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_top {
+    top: 0;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_left {
+    left: 0;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bottom {
+    bottom: 0;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_right {
+    right: 0;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_width {
+    width: 100%;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_height {
+    height: 100%;
+}
+
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea {
+    /*    -webkit-transition:all .05s ease;*/
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea .THESEED_ps_bodyCanvasAreaCtlPnt, .THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea .THESEED_ps_bodyCanvasAreaCtlBor {
+    -webkit-transition: min-width .2s ease, min-height .2s ease, background .2s ease, margin .2s ease;
+    position: absolute;
+    background: #99f;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea .THESEED_ps_bodyCanvasAreaCtlPnt {
+    min-width: 5px;
+    min-height: 5px;
+    margin: -2px;
+    z-index: 14612;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea .THESEED_ps_bodyCanvasAreaCtlPnt:hover {
+    min-width: 100px;
+    min-height: 100px;
+    margin: -50px;
+    background: rgba(255,255,255,.4);
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea .THESEED_ps_bodyCanvasAreaCtlBor {
+    min-width: 1px;
+    min-height: 1px;
+    z-index: 14611;
+    margin: -1px;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea .THESEED_ps_bodyCanvasAreaCtlBor:hover {
+    /*min-width:5px;
+     min-height:5px;
+     margin:-2px;
+     padding:-2px;*/
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasArea {
+    cursor: move;
+}
+.THESEED_ps_cursor_nw {
+    cursor: nw-resize
+}
+.THESEED_ps_cursor_ne {
+    cursor: ne-resize
+}
+.THESEED_ps_cursor_sw {
+    cursor: sw-resize
+}
+.THESEED_ps_cursor_se {
+    cursor: se-resize
+}
+.THESEED_ps_cursor_n {
+    cursor: n-resize
+}
+.THESEED_ps_cursor_s {
+    cursor: s-resize
+}
+.THESEED_ps_cursor_e {
+    cursor: e-resize
+}
+.THESEED_ps_cursor_w {
+    cursor: w-resize
+}
+
+/*button*/
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasFuncbtnBox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 14512;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasFuncbtnBox button {
+    -webkit-transition: height .2s ease, margin .2s ease, border .2s ease, box-shadow .2s ease;
+    display: block;
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px 0;
+    border: 1px solid #999;
+    border-radius: 3px;
+    box-shadow: rgba(255,255,255,.8) 0 0 40px, rgba(0,0,0,.3) 0 0 5px inset;
+    color: #ccc;
+    cursor: pointer;
+    overflow: hidden;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasFuncbtnBox button + button {
+    margin: 10px 20px 0;
+}
+.THESEED_ps_bodyCanvas .THESEED_ps_bodyCanvasFuncbtnBox button.THESEED_ps_btnHide {
+    /*    display: none;*/
+    box-shadow: none;
+    border: none;
+    height: 0;
+    padding: 0;
+    margin: 0 20px 0px;
+}
+/*img*/
+.THESEED_ps_bodyCanvasImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 14510;
+}

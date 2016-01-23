@@ -1,0 +1,37 @@
+{
+    "pure": true,
+    "version": "0.3.11",
+    "webDir": ".",
+    "srcDir": "./source",
+    "deploy": {
+        "watch": true,
+        "targetDir": "./dist",
+        "jsExportRule": "/**/index.js",
+        "libExportRule": "/*/index.*",
+        "jsShrinkDir": true,
+        "libShrinkDir": true,
+        "env": "",
+        "jsMinifyAtProduction": false,
+        "cssMinifyAtProduction": false,
+        "combo": {}
+    },
+    "server": {
+        "enable": false,
+        "livereload": false
+    },
+    "filePath": {
+        "commonDir": "./source/common",
+        "jsDir": "./source/js",
+        "libDir": "./source/lib",
+        "cssDir": "./source/css",
+        "imageDir": "./source/images",
+        "resources": {
+            "./source/css/fonts/**": "./css/fonts",
+            "./source/html/**": "./html",
+            "./app/css/fonts/**": "./css/fonts"
+        }
+    },
+    "viewDir": "./view",
+    "layoutDir": "./layout",
+    "actionDir": "./actions"
+}

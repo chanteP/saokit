@@ -1,0 +1,11 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+/*fastclick fit*/
+.fastclick_outer label > * {
+  pointer-events: none; }
+
+.fastclick_outer label a,
+.fastclick_outer label button,
+.fastclick_outer label input,
+.fastclick_outer label select,
+.fastclick_outer label textarea {
+  pointer-events: all; }

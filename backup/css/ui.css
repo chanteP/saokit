@@ -1,0 +1,151 @@
+.THESEED_ui {
+    overflow: visible;
+    height: 0;
+}
+.THESEED_ui_dialog {
+    -webkit-transition: opacity .13s ease, -webkit-transform .13s ease;
+    position: fixed;
+    /*    top: 200px;*/
+    /*    left: 100px;*/
+    display: none;
+    min-width: 100px;
+    font-family: 'Tahoma', 'Microsoft YaHei';
+    color: #666;
+    background: rgba(255,255,255,.8);
+    box-shadow: rgba(0,0,0,.4) 0 0 60px;
+    z-index: 10004;
+}
+.THESEED_ui_dialog.forPanel {
+    -webkit-transition: left .13s ease, opacity .13s ease;
+    box-shadow: rgba(0,0,0,.2) 0 0 4px;
+}
+.THESEED_ui_dialog hr {
+    margin: 0 24px;
+    border: none;
+    padding: 0;
+    height: 1px;
+    background: #777;
+}
+.THESEED_ui_dialog .THESEED_ui_title {
+    cursor: pointer;
+}
+.THESEED_ui_dialog .THESEED_ui_title h4 {
+    height: 50px;
+    padding: 0 30px;
+    margin: 0;
+    text-align: center;
+    line-height: 65px;
+    font-size: 22px;
+    font-weight: 100;
+    cursor: pointer;
+    overflow: hidden;
+}
+.THESEED_ui_dialog .THESEED_ui_cont {
+    padding: 18px 30px;
+    text-align: left;
+}
+/*black*/
+.THESEED_ui_dialog .THESEED_ui_cont p {
+    text-indent: 2em;
+    font-size: 14px;
+    font-weight: 100;
+}
+/*frame*/
+.THESEED_ui_frame .THESEED_ui_cont {
+    padding: 4px;
+}
+/*black*/
+.THESEED_ui_alert .THESEED_ui_cont, .THESEED_ui_confirm .THESEED_ui_cont {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,0,.6)), color-stop(0.35, rgba(0,0,0,.4)), color-stop(0.75, rgba(0,0,0,.4)), color-stop(1, rgba(0,0,0,.6)));
+    min-height: 90px;
+    color: #fff;
+}
+/*btn*/
+.THESEED_ui_dialog .THESEED_ui_btnbox {
+    min-height: 50px;
+    padding: 8px 0;
+    text-align: center;
+}
+.THESEED_ui_dialog .THESEED_ui_btn {
+    -webkit-transition: all .18s ease;
+    position: relative;
+    display: inline-block;
+    margin: 5px 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: rgba(0,0,0,.5);
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+.THESEED_ui_dialog .THESEED_ui_btn:hover {
+    background: rgba(0,0,0,.8);
+}
+.THESEED_ui_dialog .THESEED_ui_btn:hover:after {
+}
+.THESEED_ui_dialog .THESEED_ui_btn:after {
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: -4px;
+    display: block;
+    height: 46px;
+    width: 46px;
+    border-radius: 46px;
+    border: 1px solid rgba(0,0,0,.5);
+    background-color: transparent;
+}
+/*按钮样式*/
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_ok {
+    background: rgba(0,70,0,.7);
+}
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_ok:hover {
+    color: rgba(0,70,0,.7);
+    background: rgba(0,160,0,.2);
+}
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_ok:after {
+    border: 1px solid rgba(0,70,0,.7);
+}
+
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_func {
+    background: rgba(0,0,70,.7);
+}
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_func:hover {
+    color: rgba(0,0,70,.7);
+    background: rgba(0,0,160,.2);
+}
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_func:after {
+    border: 1px solid rgba(0,0,70,.7);
+}
+
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_cancel {
+    background: rgba(120,0,0,.7);
+}
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_cancel:hover {
+    color: rgba(120,0,0,.7);
+    background: rgba(180,0,0,.2);
+}
+.THESEED_ui_dialog .THESEED_ui_btn.THESEED_ui_btn_cancel:after {
+    border: 1px solid rgba(120,0,0,.7);
+}
+/*关闭小x*/
+.THESEED_ui_dialog .THESEED_ui_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 6px;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #666;
+    font-family: 'Microsoft YaHei', simhei;
+    display: none;
+    cursor: pointer;
+}
+.THESEED_ui_dialog:hover .THESEED_ui_close {
+    display: block;
+}

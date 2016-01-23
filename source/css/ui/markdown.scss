@@ -1,0 +1,128 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "../variable.scss";
+$page-padding : .24rem;
+.post{
+  hr {
+    color: #ededed;
+    background-color: #ededed;
+    height: 1px;
+    border: none;
+  }
+  h1, 
+  h2,
+  h3,
+  h4{
+    padding: 0 $page-padding;
+    line-height: 1.4;
+    color: #333;
+  }
+
+  h1 {
+    font-size: .40rem;
+  }
+  h2 {
+    font-size: .36rem;
+  }
+  h3 {
+    font-size: .32em;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: .30em;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0 0 1.5em;
+    padding: 0 $page-padding;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul,
+  ol {
+    margin: 0 1.5em 1.5em 0;
+    padding-left: .24rem;
+    list-style-position: inside;
+  }
+  li{
+    line-height: 1.6;
+  }
+  ul:last-of-type li{
+    @incude transition;
+    &:hover{
+      background:#f0f0f0;
+    }
+  }
+  
+
+  pre ul,
+  pre ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  pre {
+    font-size: .28rem;
+
+    padding: 2em 1.6em 2em 1.2em;
+    vertical-align: top;
+    background: #F8F8F8;
+    border: 1px solid #E8E8E8;
+    border-width: 1px 1px 1px .12rem;
+    margin: -0.5em 0 1.1em;
+    overflow-x: auto;
+  }
+
+  pre,
+  table {
+    margin: -1em 0 1em 0;
+    padding: .5em 1em;
+    background: #F6F6F6 repeat 0 0;
+  }
+
+  pre,
+  code,
+  tt {
+    font-family: 'droid sans mono', 'lucida console', monospace;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+
+
+  p tt,
+  p code {
+    background: ghostWhite;
+    border: 1px solid #DEDEDE;
+    padding: 0 0.2em;
+  }
+
+
+  table { 
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  table caption { 
+    text-align: center;
+  }
+  table th { 
+    font-weight: bold;
+  }
+  table th, table td { 
+    padding: 0.3em;
+    vertical-align: top;
+    border: solid 0.1em;
+  }
+  a{
+    color: $color-main;
+    @include transition;
+    &:hover{
+      color:$color-strong;
+    }
+  }
+}

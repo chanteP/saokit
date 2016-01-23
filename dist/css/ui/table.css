@@ -1,0 +1,34 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+/*
+    table
+*/
+table {
+  width: 100%;
+  font-size: .26rem;
+  table-layout: fixed; }
+
+th, td {
+  padding: .16rem .14rem;
+  min-height: 1em;
+  word-break: break-all;
+  line-height: 1.4; }
+
+th, .table-th {
+  background: #f8f8f8;
+  font-weight: 700; }
+
+table {
+  border: 1px solid #dedede; }
+
+table.lineborder {
+  border-left: none;
+  border-right: none; }
+
+thead + tbody,
+tbody + tbody,
+tr + tr {
+  border-top: 1px solid #dedede; }
+
+th + th,
+td + td {
+  border-left: 1px solid #dedede; }

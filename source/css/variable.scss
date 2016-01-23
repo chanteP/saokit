@@ -1,0 +1,286 @@
+//颜色
+////////////////////////////////////////////////////////////////////////////////
+//----------主题色
+$color-main: rgb(241, 161, 4);
+$color-main-dark: darken($color-main, 12%);
+$color-main-light: lighten($color-main, 10%);
+//----------强调色
+$color-strong: #3DC6B6;
+$color-strong-dark: darken($color-strong, 12%);
+$color-strong-light: lighten($color-strong, 10%);
+//----------弱化色
+$color-dis: #B2B2B2;
+$color-dis-dark: darken($color-dis, 8%);
+$color-dis-light: lighten($color-dis, 10%);
+//----------成功绿
+$color-succ: #5cb85c;
+$color-succ-dark: darken($color-succ, 10%);
+$color-succ-light: lighten($color-succ, 10%);
+//----------警告黄
+$color-warn: #f0ad4e;
+$color-warn-dark: darken($color-warn, 10%);
+$color-warn-light: lighten($color-warn, 10%);
+//----------报警红
+$color-alert: #d9534f;
+$color-alert-dark: darken($color-alert, 10%);
+$color-alert-light: lighten($color-alert, 10%);
+//----------提示蓝
+$color-info: #428bca;
+$color-info-dark: darken($color-info, 10%);
+$color-info-light: lighten($color-info, 10%);
+//----------背景白
+$color-background: #fafafa;
+$color-background-white: #fff;
+$color-background-gray: #ddd;
+//----------border
+$color-border: #dedede;
+//----------其他
+$color-graywrite: #f8f8f8;
+$color-dark: #aaa;
+//----------字体
+$color-font: #333;
+$color-font-sub: #666;
+$color-font-main: #fff;
+$color-font-white: #f0f0f0;
+$color-font-disabled: #bbb;
+$color-font-sys: rgb(20, 126, 251);
+
+@mixin background(){
+    background-color: rgba(255,255,255,.9);
+}
+
+@mixin colorActive($color : #f0f0f0){
+    &:active{
+        background-color: $color;
+    }
+}
+
+//字体
+////////////////////////////////////////////////////////////////////////////////
+$font-family: "Helvetica Neue", Helvetica, STHeiTi, 'Microsoft YaHei', sans-serif;
+$font-family-light: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+//页面边距
+////////////////////////////////////////////////////////////////////////////////
+$wrap-padding: .30rem;
+$wrap-margin: .30rem;
+
+//loading
+////////////////////////////////////////////////////////////////////////////////
+$icon-loading: '';
+$icon-loading-mini: url(/mobile/images/progressing.gif) no-repeat;
+
+//其他
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin forcerender(){
+    @include transform(translateZ(0));
+}
+//########################################################################## flex
+@mixin flexbox(){
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+@mixin flex($value : 1){
+    -webkit-box-flex: $value;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: $value;         /* OLD - Firefox 19- */
+    -webkit-flex: $value;          /* Chrome */
+    -ms-flex: $value;              /* IE 10 */
+    flex: $value;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+//########################################################################## y轴滚动
+@mixin scroll($type : auto){
+    overflow-y: $type;
+    @include prefixer(overflow-scrolling, touch);
+    @include forcerender;
+}
+//########################################################################## x轴滚动
+@mixin scrollX($type : auto){
+    overflow-x: $type;
+    @include prefixer(overflow-scrolling, touch);
+    @include forcerender;
+}
+//########################################################################## 过渡动画
+@mixin transition($duration : 0.2s, $delay : 0s, $type : ease){
+    @include prefixer(transition, all $duration $type $delay);
+}
+@mixin transition-property($property...){
+    @include prefixer(transition-property, $property);
+}
+@mixin transition-delay($delay){
+    @include prefixer(transition-delay, $delay);
+}
+//########################################################################## 变换
+@mixin transform($value){
+    @include prefixer(transform, $value);
+}
+@mixin transform-origin($value : 50% 50%){
+    @include prefixer(transform-origin, $value);
+}
+@mixin filter($value){
+    @include prefixer(filter, $value);
+}
+@mixin perspective($value : 8rem){
+    @include prefixer(perspective, $value);
+}
+//########################################################################## 动画
+@mixin animation($data){
+    @include prefixer(animation, $data);
+}
+@mixin animation-duration($duration : 0.3s){
+    @include prefixer(animation-duration, $duration);
+}
+@mixin animation-delay($delay : 0s){
+    @include prefixer(animation-delay, $delay);
+}
+//########################################################################## 文本
+
+@mixin fontAwesome{
+    display: inline-block;
+    font: normal normal normal .28rem/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    @include prefixer(font-smoothing, antialiased);
+}
+@mixin themify{
+    display: inline-block;
+    font: normal normal normal .28rem/1 themify;
+    font-size: inherit;
+    text-rendering: auto;
+    @include prefixer(font-smoothing, antialiased);
+}
+@mixin fontIcon{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 100%;
+    box-sizing:border-box;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+@mixin text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+//########################################################################## 居中
+@mixin middleX{
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+@mixin middleY{
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+@mixin middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+}
+
+
+//########################################################################## 三角形
+@mixin triangle($direction, $width, $height, $color ) {
+    height: 0;
+    width: 0;
+
+    @if $direction == top or $direction == bottom{
+        border-left:#{$width / 2} solid transparent;
+        border-right:#{$width / 2} solid transparent;
+    }
+    @else if $direction == right or $direction == left{
+        border-top:#{$width / 2} solid transparent;
+        border-bottom:#{$width / 2} solid transparent;
+    }
+    @if $direction == top {
+        border-bottom:$height solid $color;
+    } 
+    @else if $direction == right {
+        border-left:$height solid $color;
+    } 
+    @else if $direction == bottom {
+        border-top:$height solid $color;
+    } 
+    @else if $direction == left {
+        border-right:$height solid $color;
+    }
+}
+//########################################################################## loading
+@mixin loadingIcon{
+    &:before{
+        content : '\e619';
+        font-family: themify;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        font-size: .28rem;
+        margin-top: -.14rem;
+        color:#666;
+    }
+}
+//########################################################################## 不知道从哪里弄来的渐变
+@function legacy-direction($value) {
+    @if is-direction($value) == false {
+        @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+    }
+    $conversion-map: (
+        to top          : bottom,
+        to top right    : bottom left,
+        to right top    : left bottom,
+        to right        : left,
+        to bottom right : top left,
+        to right bottom : left top,
+        to bottom       : top,
+        to bottom left  : top right,
+        to left bottom  : right top,
+        to left         : right,
+        to left top     : right bottom,
+        to top left     : bottom right
+    );
+    @if map-has-key($conversion-map, $value) {
+        @return map-get($conversion-map, $value);
+    }
+
+    @return 90deg - $value;
+}
+@mixin linear-gradient($prop, $direction, $color-stops...) {
+    // Direction has been omitted and happens to be a color-stop
+    @if is-direction($direction) == false {
+        $color-stops: $direction, $color-stops;
+        $direction: 180deg;
+    }
+    #{$prop}: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    #{$prop}: linear-gradient($direction, $color-stops);
+}
+
+//########################################################################## 前缀
+@mixin prefixer ($property, $value, $prefixes : webkit) {
+    #{$property}: $value;
+    @each $prefix in $prefixes {
+        @if $prefix == webkit {
+            -webkit-#{$property}: $value;
+        }
+        @else if $prefix == moz {
+            -moz-#{$property}: $value;
+        }
+        @else if $prefix == ms {
+            -ms-#{$property}: $value;
+        }
+        @else if $prefix == o {
+            -o-#{$property}: $value;
+        }
+        @else {
+        }
+    }
+}

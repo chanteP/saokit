@@ -1,0 +1,30 @@
+{
+    "name": "np-saoui",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "description": "",
+    "browser_action": {
+        "default_icon": "/dist/images/icon/def_icon.png",
+        "default_popup": "/dist/html/popup.html",
+        "default_title": ""
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["/dist/lib/react.js", "/dist/js/content.js"],
+            "css": ["/dist/css/content.css"],
+            "all_frames": true
+        }
+    ],
+    "icons": {
+        "16": "/dist/images/icon/icon16.png",
+        "48": "/dist/images/icon/icon48.png",
+        "128": "/dist/images/icon/icon128.png"
+    },
+    "minimum_chrome_version": "18",
+    "background": {
+        "scripts": []
+    },
+    "permissions": ["contextMenus", "bookmarks", "storage", "tabs", "*://*/", "*://*/*"],
+    "web_accessible_resources": ["/dist/images/icon/*", "/dist/css/fonts/*/*"]
+}

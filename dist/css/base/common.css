@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+html {
+  font-size: 100%;
+  font-size: 50px;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #fff; }
+
+@media screen and (max-width: 750px) {
+  html {
+    -webkit-font-smoothing: antialiased; } }
+
+/* body loading状态
+----------------------------------------------------------------------------------------*/
+body {
+  height: 100%;
+  color: #333;
+  font-size: .26rem;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, "Microsoft YaHei", sans-serif;
+  background: none #fafafa center center no-repeat;
+  overflow: hidden; }
+
+/* 通用预设
+----------------------------------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.6;
+  color: #333; }
+
+h1 {
+  font-size: .44rem; }
+
+h2 {
+  font-size: .36rem; }
+
+h3 {
+  font-size: .32rem;
+  font-weight: 700; }
+
+h4 {
+  font-size: .30rem;
+  font-weight: 400; }
+
+a {
+  color: #f1a104; }
+
+a:visited {
+  color: #b57903; }
+
+a:hover,
+a:active {
+  color: #3DC6B6; }
+
+em {
+  color: #3DC6B6; }
+
+strong {
+  font-weight: 700; }
+
+p {
+  line-height: 1.8; }
+
+b, i, em {
+  font-style: normal; }
+
+code {
+  display: block;
+  font-size: .26rem;
+  background: #f0f0f0;
+  padding: .2rem .2rem;
+  margin: .2rem auto;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  line-height: 1.4; }
+
+label {
+  cursor: pointer; }
+
+input,
+textarea {
+  font-size: .3rem;
+  line-height: 1;
+  color: #333; }
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none; }
+
+hr {
+  display: block;
+  height: 0;
+  border: 0;
+  margin: .14rem 0;
+  padding: 0;
+  clear: both; }
+
+::selection {
+  background: #3DC6B6;
+  color: #fff;
+  text-shadow: none; }
+
+/*common
+----------------------------------------------------------------------------------------*/
+.hide {
+  display: none !important; }
+
+.hidden {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.noborder {
+  border: none; }
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+input::input-placeholder {
+  color: #bbb; }
+
+input::-webkit-input-placeholder {
+  color: #bbb; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both; }
+
+.scroll {
+  overflow-y: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0); }
+
+.scroll-view {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0); }
+
+.scroll-view-x {
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0); }
+
+.flexbox {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+
+.flex {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+
+.mid {
+  text-align: center; }
+
+.mid:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.mid > .midcont {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle; }
+
+.loading {
+  position: relative; }
+  .loading:before {
+    content: '\e619';
+    font-family: themify;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    font-size: .28rem;
+    margin-top: -.14rem;
+    color: #666; }
+  .loading:before {
+    animation: maware 1s infinite 0s;
+    -webkit-animation: maware 1s infinite 0s; }
+
+body.locate {
+  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  outline: #dedede 1px solid; }
+
+@-webkit-keyframes maware {
+  0% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); } }

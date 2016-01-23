@@ -1,0 +1,85 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "./variable.scss";
+/* base
+----------------------------------*/
+@import "./base/reset.scss";
+@import "./base/animate.scss";
+@import "./base/grid.scss";
+/* ui
+----------------------------------*/
+// @import "./ui/font-awesome.scss";
+// @import "./ui/themify.scss";
+
+$color-ui : rgba(255,255,255,.9);
+/* custom
+----------------------------------*/
+.theseed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 99999;
+    overflow: visible;
+}
+.wrapper-pos{
+    position: absolute;
+    height: auto;
+    @include scroll(auto);
+}
+.menu{
+
+}
+.item{
+    display: block;
+}
+.menu-main{
+}
+$item-main-size: 50px;
+.item-main{
+    position: relative;
+    width: $item-main-size;
+    height: $item-main-size;
+    border-radius : 100%;
+    background: $color-ui;
+    &:before{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        display: block;
+        width: #{$item-main-size + 4px};
+        height: #{$item-main-size + 4px};
+        border-radius : 100%;
+        border: $color-ui 2px solid;
+    }
+}
+
+
+
+/*滚动条*/
+.theseed ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+}
+.theseed ::-webkit-scrollbar {
+    -webkit-transition: all .1s ease;
+    width: 10px;
+    height: 13px;
+}
+.theseed ::-webkit-scrollbar-thumb {
+    -webkit-transition: all .1s ease;
+    margin: 2px 0;
+/*    background-color: rgba(255,255,255,.6);*/
+    background-color: rgba(255,190,0,.6);
+    background-clip: padding-box;
+    border: 1px solid #fd6;
+    min-height: 28px;
+    box-shadow: rgba(0,0,0,.1) 0 0 10px;
+}
+.theseed ::-webkit-scrollbar-thumb:hover {
+    border: 1px solid #e90;
+    background-color: rgba(255,190,0,.8);
+    box-shadow: rgba(255,200,0,.3) 0 0 10px;
+}

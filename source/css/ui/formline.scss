@@ -1,0 +1,193 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "../variable.scss";
+
+$color-form-background : #f8f8f8;
+$color-form-foreground : #fff;
+$color-form-border : $color-border;
+$color-form-font : $color-font;
+$color-form-font-sub : #999;
+$form-padding : $wrap-padding;
+$form-font-size : .3rem;
+$form-lineheight : .9rem;
+
+@mixin transparentInput{
+    border:none;
+    box-shadow: none;
+    background: transparent;
+}
+@mixin lineIcon($code : ''){
+    content: $code;
+    @include themify;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: $form-padding;
+    line-height: $form-lineheight;
+    font-size: $form-font-size;
+    color: #666;
+}
+
+.form-view{
+    display: block;
+    background: $color-form-background;
+}
+//cell#####################################
+.form-cell{
+    position: relative;
+    padding: 0 $form-padding;
+    display: block;
+    line-height: $form-lineheight;
+    color:$color-font;
+    font-size: $form-font-size;
+    text-decoration: none;
+    border: 0 solid $color-form-border;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    background: $color-form-foreground;
+    overflow: hidden;
+
+    &.clear{
+        padding: 0;
+    }
+    & + .form-cell{
+        margin-top: -1px;
+    }
+    .ui-switch + span{
+        float: right;
+        font-size: .26rem;
+        margin-top: .8em;
+    }
+    &.cell-right{
+        .form-cell-content{
+            text-align: right;
+        }
+    }
+    &.cell-right.active{
+        .form-cell-content{
+            text-align: right;
+            margin-right: .4rem;
+        }
+    }
+
+    &.nowrap{
+        white-space: nowrap;
+    }
+    &.active{
+        cursor: pointer;
+        &:after{
+            @include lineIcon('\e649');
+        }
+        &:active{
+            background-color: $color-background-gray;
+        }
+    }
+    .mark{
+        cursor: pointer;
+        @include lineIcon('');
+        color: #b3b3b3;
+    }
+}
+a.form-cell{
+    color: $color-font;
+}
+.form-cell-input[disabled],
+.form-disabled,
+.form-placeholder{
+    // line-height: $form-lineheight;
+    color:$color-font-disabled;
+    font-size: $form-font-size;
+}
+//左右布局相关#####################################
+.form-cell-text{
+    float: left;
+    display: block;
+    width: 6em;
+    line-height: $form-lineheight;
+    // line-height: #{$form-lineheight - 0.06rem};
+    font-size: .3rem;
+    color: #333;
+
+    span{
+        display: inline-block;
+        line-height: 1;
+        // vertical-align: middle;
+    }
+}
+.form-cell-content,
+.form-cell-content > label{
+    display: block;
+    line-height: $form-lineheight;
+    overflow: hidden;
+}
+.form-cell-text + .form-cell-content{
+    // margin-left: 5.5em;
+}
+//输入#####################################
+input.form-cell-input{
+    display: inline-block;
+    width: 100%;
+    font-size: $form-font-size;
+    color: $color-form-font;
+    padding: 0;
+    @include transparentInput;
+}
+textarea.form-cell-input{
+    display: block;
+    width: 100%;
+    height: 1.08rem;
+    padding: .2rem 0;
+    line-height: 1.2;
+    font-size: $form-font-size;
+    color: $color-form-font;
+    @include transparentInput;
+    resize:none;
+}
+
+//section#####################################
+.form-section-header,
+.form-section-footer{
+    display: block;
+    padding-left: $form-padding;
+    padding-right: $form-padding;
+    font-size: .26rem;
+    color: $color-form-font-sub;
+    float: none;
+    background: $color-form-background;
+    border: 1px solid transparent;
+    height: .6rem;
+    line-height: .6rem;
+}
+.form-section{
+    background: $color-form-foreground;
+    .form-cell{
+        border-color:transparent;
+    }
+    .form-section-header + .form-cell,
+    // .form-cell:nth-of-type(1),
+    .form-cell:first-child{
+        border-top-color: $color-form-border;
+    }
+    .form-cell + .form-section-footer{
+        border-top-color: $color-form-border;
+    }
+    // .form-cell:nth-last-of-type(1),
+    .form-cell:last-child{
+        border-bottom-color: $color-form-border;
+    }
+    .form-cell + .form-cell:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        margin-left: $form-padding;
+        background: $color-form-border;
+        overflow: hidden;
+        z-index: 1;
+    }
+    & + .form-section{
+        margin-top: -1px;
+    } 
+}

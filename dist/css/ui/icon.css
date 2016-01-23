@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+.icon {
+  display: inline-block;
+  /* 颜色预设 */
+  /* 文本预设 */ }
+  .icon:before {
+    display: inline-block;
+    font: normal normal normal .28rem/1 themify;
+    font-size: inherit;
+    text-rendering: auto;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 1400;
+    color: #fff; }
+  .icon:before {
+    background: #b57903; }
+  .icon:active:before {
+    background: #fcb62c; }
+  .icon.green:before, .icon.succ:before {
+    background: #5cb85c; }
+  .icon.green:active:before, .icon.succ:active:before {
+    background: #449d44; }
+  .icon.red:before, .icon.error:before {
+    background: #d9534f; }
+  .icon.red:active:before, .icon.error:active:before {
+    background: #c9302c; }
+  .icon.blue:before, .icon.info:before {
+    background: #428bca; }
+  .icon.blue:active:before, .icon.info:active:before {
+    background: #3071a9; }
+  .icon.yellow:before, .icon.warn:before {
+    background: #f0ad4e; }
+  .icon.yellow:active:before, .icon.warn:active:before {
+    background: #ec971f; }
+  .icon.transparent:before {
+    background: transparent;
+    color: #666; }
+  .icon.transparent:active:before {
+    background: transparent;
+    color: #333; }
+  .icon.white:before {
+    background: transparent; }
+  .icon.white:active:before {
+    background: transparent; }
+  .icon.succ:not([class*=" ti-"]):before {
+    content: '\e64c'; }
+  .icon.error:not([class*=" ti-"]):before {
+    content: '\e646'; }
+  .icon.info:not([class*=" ti-"]):before {
+    content: 'i'; }
+  .icon.warn:not([class*=" ti-"]):before {
+    content: '!'; }
+  .icon.close:before {
+    content: '\e646'; }
+  .icon.check:before {
+    content: '\e64c'; }
+  .icon.plus:before {
+    content: '\e61a'; }
+  .icon.minus:before {
+    content: '\e622'; }

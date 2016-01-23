@@ -1,0 +1,9 @@
+#THESEED {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+#THESEED ::selection,#THESEED ::-webkit-selection {
+    background: rgba(249,232,206,.7);
+    color: #804000;
+}

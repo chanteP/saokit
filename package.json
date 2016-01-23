@@ -1,0 +1,15 @@
+{
+    "name": "2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "alpha": "node ./node_modules/.bin/alpha "
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@mtfe/alpha": "^0.3.11"
+    }
+}

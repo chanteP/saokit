@@ -1,0 +1,104 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "../variable.scss";
+
+.icon{
+    display: inline-block;
+
+    &:before{
+        @include themify;
+        @include fontIcon;
+        font-size: 1em;
+        font-weight: 1400;
+        color: #fff;
+    }
+
+    /* 颜色预设 */
+    &{
+        &:before{
+            background: $color-main-dark;
+        }
+        &:active:before{
+            background: $color-main-light;
+        }
+    }
+    &.green,
+    &.succ{
+        &:before{
+            background: $color-succ;
+        }
+        &:active:before{
+            background: $color-succ-dark;
+        }
+    }
+    &.red,
+    &.error{
+        &:before{
+            background: $color-alert;
+        }
+        &:active:before{
+            background: $color-alert-dark;
+        }
+    }
+    &.blue,
+    &.info{
+        &:before{
+            background: $color-info;
+        }
+        &:active:before{
+            background: $color-info-dark;
+        }
+    }
+    &.yellow,
+    &.warn{
+        &:before{
+            background: $color-warn;
+        }
+        &:active:before{
+            background: $color-warn-dark;
+        }
+    }
+
+    &.transparent{
+        &:before{
+            background: transparent;
+            color: #666;
+        }
+        &:active:before{
+            background: transparent;
+            color: #333;
+        }
+    }
+    &.white{
+        &:before{
+            background: transparent;
+        }
+        &:active:before{
+            background: transparent;
+        }
+    }
+    /* 文本预设 */
+    &.succ:not([class*=" ti-"]):before{
+        content: '\e64c';
+    }
+    &.error:not([class*=" ti-"]):before{
+        content: '\e646';
+    }
+    &.info:not([class*=" ti-"]):before{
+        content: 'i';
+    }
+    &.warn:not([class*=" ti-"]):before{
+        content: '!';
+    }
+    &.close:before{
+        content:'\e646'
+    }
+    &.check:before{
+        content:'\e64c'
+    }
+    &.plus:before{
+        content:'\e61a'
+    }
+    &.minus:before{
+        content:'\e622'
+    }
+}

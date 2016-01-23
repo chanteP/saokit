@@ -1,0 +1,140 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@import "../variable.scss";
+
+.ui-radio,
+.ui-checkbox{
+    display: none;
+
+    & + span{
+        display: inline-block;
+        min-height: .38rem;
+    }
+    & + span:before{
+        content :'';
+        @include themify;
+        @include fontIcon;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        margin: -.04rem .14rem 0 .02rem;
+        border-style: solid;
+        border-width: .02rem;
+        border-color: #aaa;
+        font-size: .24rem;
+        font-weight: 700;
+        color:#fff;
+        background: #fff;
+        @include transition(.2s);
+    }
+    & + span:hover:before,
+    &:focus + span:before,
+    &:active + span:before{
+        border-color: $color-main-dark;
+    }
+    &:disabled + span:before{
+        border-color: #c8c8c8;
+        background: #f4f4f4;
+    }
+
+    &:checked + span:before{
+        border-color: $color-main-dark;
+    }
+
+    &:disabled:checked + span:before{
+        border-color: #c8c8c8;
+        background: #c8c8c8;
+    }
+}
+.ui-radio{
+    & + span:hover:before,
+    &:focus + span:before,
+    &:active + span:before{
+        border-width: .02rem;
+    }
+
+    // &:disabled + span:before,
+    &:disabled:checked + span:before{
+        border-color: #f4f4f4;
+        box-shadow: #c8c8c8 0 0 0 1px;
+    }
+    &:checked + span:before,
+    &:disabled:checked + span:before{
+        border-width: .1rem;
+    }
+}
+
+.ui-checkbox{
+    &:checked + span:before{
+        content:'\e64c';
+        background: $color-main-dark;
+    }
+}
+
+.ui-switch{
+    display: none;
+    & + span{
+        position: relative;
+        display: inline-block;
+        height: 2em;
+        width: 4em;
+        padding: .02rem;
+        background: #d5d5d5;
+        // box-shadow: #aaa 0 0 .04rem inset;
+        vertical-align: middle;
+        border-radius: 2em;
+        overflow: hidden;
+        @include transition;
+
+        &:after{
+            content:'';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2em;
+            width: 2em;
+            // margin: .02rem;
+            border: .02rem solid #d5d5d5;
+            background: #fff;
+            border-radius: 2em;
+            // box-shadow: rgba(0,0,0,.15) 0 .02rem .04rem;
+            @include transition;
+            @include transform(translate(-2em, 0));
+        }
+    }
+    &:checked + span{
+        background: $color-main;
+        &:after{
+            border-color: $color-main;
+            @include transform(translate(0, 0));
+        }
+    }
+    &:disabled + span{
+        background: #d5d5d5;
+        &:after{
+            background: #f8f8f8;
+        }
+    }
+    &:disabled:checked + span{
+        background: #bbb;
+        &:after{
+            border-color: #bbb;
+        }
+    }
+}
+.ui-input{
+    display: inline-block;
+    width: auto;
+    margin: 0 0.1rem;
+    padding: .12rem;
+    font-size: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    background: #e8e8e8;
+    border: 1px solid $color-border; 
+    border-radius: .04rem;
+    box-shadow: none;
+    &:focus{
+        background: #cacaca;
+    }
+}
+

@@ -1,0 +1,7 @@
+/** track@alpha:{"version":"0.3.11","build":"2016-01-24 01:04:37","hash":""} */
+@for $i from 1 through 12{
+  .g-#{$i}{
+    width: percentage($i/12);
+    float: left;
+  }
+}
